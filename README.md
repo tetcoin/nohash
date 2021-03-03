@@ -1,4 +1,4 @@
-# NoHashHasher
+# Nohash Hasher
 
 For an enabled type `T`, a `NoHashHasher<T>` implements `std::hash::Hasher` and
 uses the value set by one of the `write_{u8, u16, u32, u64, usize, i8, i16, i32,
