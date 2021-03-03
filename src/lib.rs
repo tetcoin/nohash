@@ -19,7 +19,7 @@ use core::{fmt, hash::{BuildHasherDefault, Hasher}, marker::PhantomData};
 /// See [`IsEnabled`] for use with custom types.
 ///
 /// ```
-/// use nohash_hasher::IntMap;
+/// use nohash::IntMap;
 ///
 /// let mut m: IntMap<u32, bool> = IntMap::default();
 ///
@@ -39,7 +39,7 @@ pub type IntMap<K, V> = std::collections::HashMap<K, V, BuildNoHashHasher<K>>;
 /// See [`IsEnabled`] for use with custom types.
 ///
 /// ```
-/// use nohash_hasher::IntSet;
+/// use nohash::IntSet;
 ///
 /// let mut m = IntSet::default();
 ///
@@ -59,7 +59,7 @@ pub type IntSet<T> = std::collections::HashSet<T, BuildNoHashHasher<T>>;
 /// See also [`IntMap`] and [`IntSet`] for some easier usage examples.
 ///
 /// ```
-/// use nohash_hasher::BuildNoHashHasher;
+/// use nohash::BuildNoHashHasher;
 /// use std::collections::HashMap;
 ///
 /// let mut m: HashMap::<u8, char, BuildNoHashHasher<u8>> =
@@ -91,7 +91,7 @@ pub type BuildNoHashHasher<T> = BuildHasherDefault<NoHashHasher<T>>;
 /// usage examples. See [`IsEnabled`] for use with custom types.
 ///
 /// ```
-/// use nohash_hasher::NoHashHasher;
+/// use nohash::NoHashHasher;
 /// use std::{collections::HashMap, hash::BuildHasherDefault};
 ///
 /// let mut m: HashMap::<u8, char, BuildHasherDefault<NoHashHasher<u8>>> =
@@ -172,9 +172,9 @@ impl<T> Copy for NoHashHasher<T> {}
 ///     }
 /// }
 ///
-/// impl nohash_hasher::IsEnabled for SomeType {}
+/// impl nohash::IsEnabled for SomeType {}
 ///
-/// let mut m = nohash_hasher::IntMap::default();
+/// let mut m = nohash::IntMap::default();
 ///
 /// m.insert(SomeType(1), 't');
 /// m.insert(SomeType(0), 'f');
