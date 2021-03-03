@@ -6,6 +6,8 @@ authors = ["Parity Technologies <admin@parity.io>"]
 license = "Apache-2.0 OR MIT"
 description = "An implementation of `std::hash::Hasher` which does not hash at all."
 repository = "https://github.com/tetcoin/nohash"
+homepage = "https://github.com/tetcoin/nohash"
+documentation = "https://docs.rs/nohash"
 readme = "README.md"
 keywords = ["hash", "hasher", "hashmap", "hashset"]
 
